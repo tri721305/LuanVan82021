@@ -5686,7 +5686,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .package-included-location .single-blog {
   position: relative;
 }
-.package-included-location .single-blog:after {
+/* .package-included-location .single-blog:after {
   content: "";
   position: absolute;
   top: 16px;
@@ -5694,7 +5694,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border: 1px solid #76819f;
   left: 34px;
   z-index: -2;
-}
+} */
 .package-included-location .single-blog.single-blog-after-none:after {
   display: none;
 }

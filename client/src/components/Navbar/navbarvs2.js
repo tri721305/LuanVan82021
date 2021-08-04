@@ -70,7 +70,7 @@ const NavbarVS2 = () => {
             <ul className="pl-0">
               <li className="top-bar-btn-booking">
                 <Link className="btn btn-yellow" to="/tour-details">
-                  Sign In <i className="fa fa-paper-plane" />
+                  Sign InSS <i className="fa fa-paper-plane" />
                 </Link>
               </li>
               <li className="tp-lang">
@@ -108,13 +108,8 @@ const NavbarVS2 = () => {
             </Link>
           </div>
           <ul className="navbar-nav">
-            <li className="menu-item-has-children">
+            <li>
               <Link to="/">Home</Link>
-              <ul className="sub-menu">
-                {/* <li><Link to="/">Home 01</Link></li>
-			            <li><Link to="/home-v2">Home 02</Link></li>
-			            <li><Link to="/home-v3">Home 03</Link></li> */}
-              </ul>
             </li>
             <li>
               <Link to="/about">About Us</Link>
@@ -123,22 +118,17 @@ const NavbarVS2 = () => {
               <a href="#">Plan</a>
               <ul className="sub-menu">
                 <li>
-                  <Link to="/plan">Create Plan</Link>
+                  <Link to="/plans">Create Plan</Link>
                 </li>
                 {/* <li><Link to="/tour-list">Tours List</Link></li> */}
                 <li>
                   <Link to="/tour-list-v2">Plan List</Link>
                 </li>
-                {/* <li><Link to="/tour-list-v3">Tours List 03</Link></li> */}
-                {/* <li><Link to="/tour-details">Tours Details</Link></li> */}
+
                 <li>
                   <Link to="/destination-list">Destination List</Link>
                 </li>
-                {/* <li><Link to="/destination-list-v2">Destination List 2</Link></li> */}
-                {/* <li><Link to="/destination-details">Destination Details</Link></li> */}
-                {/* <li><Link to="/gallery">Gallery</Link></li> */}
-                {/* <li><Link to="/gallery-details">Gallery Details</Link></li> */}
-                {/* <li><Link to="/comming-soon">Comming soon</Link></li> */}
+
                 <li>
                   <Link to="/error">404</Link>
                 </li>
@@ -151,31 +141,26 @@ const NavbarVS2 = () => {
               </ul>
             </li>
             <li className="menu-item-has-children">
-              <Link to="/blog">Blog</Link>
+              <Link to="/posts">Blog</Link>
               <ul className="sub-menu">
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/posts">Create Blog</Link>
                 </li>
-                {/* <li><Link to="/blog-v2">Blog 02</Link></li> */}
-                {/* <li><Link to="/blog-v3">Blog 03</Link></li> */}
+
                 <li>
-                  <Link to="/blog-details">Blog Details</Link>
+                  <Link to="/posts">Blogs</Link>
                 </li>
               </ul>
             </li>
-            <li>
+            {/* <li>
               <Link to="/contact">Contact</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="nav-right-content">
           <ul>
             <li></li>
-            {/* <li>
-              <Link className="btn btn-yellow" to="/login">
-                Sign In <i className="fa fa-arrow-right" />
-              </Link>
-            </li> */}
+
             {user ? (
               <li>
                 <div className={classes.profile}>
@@ -192,7 +177,7 @@ const NavbarVS2 = () => {
                   <Button
                     variant="contained"
                     className={classes.logout}
-                    color="secondary"
+                    style={{ backgroundColor: "#F39142", color: "white" }}
                     onClick={logout}
                   >
                     Logout
@@ -205,7 +190,8 @@ const NavbarVS2 = () => {
                   component={Link}
                   to="/auth"
                   variant="contained"
-                  color="primary"
+                  style={{ backgroundColor: "#F3941E", color: "white" }}
+                  className="btn "
                 >
                   Sign in
                 </Button>
@@ -221,9 +207,9 @@ const NavbarVS2 = () => {
                 </select>
               </div>
             </li>
-            <li className="search">
+            {/* <li className="search">
               <i className="ti-search" />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

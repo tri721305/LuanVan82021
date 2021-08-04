@@ -1,6 +1,6 @@
 import React from "react";
 // import { Container } from "@material-ui/core";
-// import { useDispatch } from "react-redux";
+
 import {
   BrowserRouter,
   Switch,
@@ -8,8 +8,8 @@ import {
   HashRouter,
   Redirect,
 } from "react-router-dom";
+// import LocationForm from "./components/PlanLocation/planLocation";
 
-import Navbar from "./components/Navbar/navbar";
 import HomeCreate from "./components/Home/Home";
 import Home from "./components/home-v1";
 import Auth from "./components/Auth/Auth";
@@ -18,9 +18,19 @@ import TourDetails from "./components/tour-details";
 import DestinationList from "./components/destination-list";
 import DestinationListV2 from "./components/destination-list-v2";
 import NavbarVS2 from "./components/Navbar/navbarvs2";
-import Plan from "./components/plan1";
 import UserProfilePage from "./components/user-profile";
 import PlanDetails from "./components/PlanDetail/Plandetails";
+import DateForm from "./components/DateForm/dataform";
+import TourListPage from "./components/tour-list";
+import Planners from "./components/Planners/Planners";
+import Search from "./components/PlanLocation/Search";
+
+import PlannersTri from "./components/PlannerDetails/plannerdetails";
+import ReviewPost from "./components/section-components/tour-details";
+import BlogDetails from "./components/blog-details";
+
+import PostDetails from "./components/postDetails";
+
 const App = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
   return (
@@ -28,26 +38,33 @@ const App = () => {
       {/* <HashRouter basename="/"> */}
       <BrowserRouter>
         {/* <Container maxWidth="lg"> */}
-        {/* <Navbar /> <NavbarVS2 /> */}
-        {/* <Navbar /> */}
-        <Switch>
-          <Route path="/" exact component={HomeCreate} />
 
+        <Switch>
+          <Route path="/" exact component={Home} />
           <Route path="/posts" exact component={HomeCreate} />
           <Route path="/posts/search" exact component={HomeCreate} />
-          <Route path="/posts/:id" component={PlanDetails} />
+
+          <Route path="/posts/:id" component={PostDetails} />
           <Route path="/tourlist" component={TourDetails} />
+
+          <Route path="/planlocation" component={Search} />
+          <Route path="/plandate" component={DateForm} />
+          <Route path="/plans" exact component={Planners} />
+
+          <Route path="/plans/search" exact component={Planners} />
+          <Route path="/plans/:id" component={TourDetails} />
+          <Route path="/blogdetails" component={BlogDetails} />
           <Route
             path="/auth"
             exact
             component={() => (!user ? <Auth /> : <Redirect to="/posts" />)}
           />
-          {/* <Route path="/about" component={About} />
-            <Route path="/plan" component={Plan} />
-            <Route path="/tourlist" component={TourDetails} />
-            <Route path="/destinationlist" component={DestinationList} />
-            <Route path="/destinationlistv2" component={DestinationListV2} />
-            <Route path="/user" component={UserProfilePage} /> */}
+          <Route path="/about" component={About} />
+
+          <Route path="/tourlist" component={TourDetails} />
+          <Route path="/destinationlist" component={DestinationListV2} />
+
+          <Route path="/user-profile" component={UserProfilePage} />
         </Switch>
         {/* </Container> */}
       </BrowserRouter>

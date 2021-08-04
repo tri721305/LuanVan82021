@@ -249,17 +249,20 @@ class TourDetails extends Component {
                           />
                         </div>
                         <div className="single-blog-details">
-                          <h4 className="title">Welcome to DaLat</h4>
+                          {/* <h4 className="title">Welcome to DaLat</h4> */}
+                          <p className="content">7:00 Bánh Mì Chảo Minh </p>
+                          <p className="content">8:00 Cối Xay Gió </p>
+                          <p className="content">11:00 Phở Bò Tuyền</p>
+                          <p className="content">12:00 Nghỉ Trưa </p>
                           <p className="content">
-                            Bước xuống xe là cảm giác không lẫn vào đâu được,
-                            không khí se se lạnh....
+                            15:00 Quán Cuả Thời Thanh Xuân{" "}
                           </p>
-                          <a className="btn-read-more" href="#">
-                            <span>
-                              Add more activities
-                              <i className="la la-arrow-right" />
-                            </span>
-                          </a>
+                          <p className="content">18:00 Lẩu Bò 3 Toa </p>
+                          <p className="content">19:00 Hoa Coffe</p>
+                          {/* <p className="content">18:00 Lẩu Gà Lá É</p> */}
+                          {/* <p className="content">
+                            19:00 Chợ Đà Lạt & Quảng Trường
+                          </p> */}
                         </div>
                       </div>
                     </div>
@@ -276,17 +279,18 @@ class TourDetails extends Component {
                           />
                         </div>
                         <div className="single-blog-details">
-                          <h4 className="title">Cafe, ăn hết Đà Lạt</h4>
+                          {/* <h4 className="title">Welcome to DaLat</h4> */}
+                          <p className="content">5:00 Welcome To DaLat</p>
+                          <p className="content">6:00 Check In</p>
+                          <p className="content">7:00 Bánh Căn Bà 5</p>
+                          <p className="content">8:00 Đồi Thông Coffee </p>
+                          <p className="content">11:00 Nem Bà Hùng </p>
+                          <p className="content">12:00 Nghỉ Trưa</p>
+                          <p className="content">14:00 Rừng Lá Thông</p>
+                          <p className="content">18:00 Lẩu Gà Lá É</p>
                           <p className="content">
-                            Ngày thứ hai, nhóm tụi mình đã ghé thăm cafe nhà gỗ,
-                            ......
+                            19:00 Chợ Đà Lạt & Quảng Trường
                           </p>
-                          <a className="btn-read-more" href="#">
-                            <span>
-                              Add more activities
-                              <i className="la la-arrow-right" />
-                            </span>
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -306,17 +310,16 @@ class TourDetails extends Component {
                           />
                         </div>
                         <div className="single-blog-details">
-                          <h4 className="title">Quẫy ngày cuối và lên xe về</h4>
+                          {/* <p className="content">6:00 Check In</p> */}
+                          <p className="content">7:00 Bánh Uot Long Ga</p>
+                          <p className="content">8:00 Đồi Lavender </p>
+                          <p className="content">11:00 Nem Bà Hùng </p>
+                          <p className="content">12:00 Nghỉ Trưa</p>
+                          <p className="content">14:00 Hồ Tuyền Lâm</p>
+                          <p className="content">18:00 Lẩu Gà Lá É</p>
                           <p className="content">
-                            Ngày cuối cùng nhóm tụi mình đã quyết định đi ngắm
-                            bình minh, săn mây ở ....
+                            19:00 Chợ Đà Lạt & Quảng Trường
                           </p>
-                          <a className="btn-read-more" href="#">
-                            <span>
-                              Add more activities
-                              <i className="la la-arrow-right" />
-                            </span>
-                          </a>
                         </div>
                       </div>
                     </div>

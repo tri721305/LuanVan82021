@@ -8,11 +8,11 @@ import Video from "./section-components/video";
 import HolidayPlan from "./section-components/holiday-plan";
 import Review from "./section-components/review";
 import BlogSection from "./blog-components/blog-section";
-import Ads from "./section-components/ads";
+import Ads from "./section-components/ads-v2";
 import Subscribe from "./section-components/subscribe";
 import Footer from "./global-components/footer";
 import NavbarVS2 from "./Navbar/navbarvs2";
-
+import SearachV2 from "./section-components/search-v2";
 const Home_V1 = () => {
   return (
     <div>
@@ -25,7 +25,7 @@ const Home_V1 = () => {
       <HolidayPlan />
       <Review />
       <BlogSection />
-      {/* <Ads /> */}
+      <Ads />
       <Subscribe />
       <Footer />
     </div>

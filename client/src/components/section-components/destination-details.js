@@ -1,166 +1,125 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React from "react";
+import { Link } from "react-router-dom";
+import parse from "html-react-parser";
 
-class DestinatioDetails extends Component {
+const DestinatioDetails = () => {
+  let publicUrl = process.env.PUBLIC_URL + "/";
+  let imagealt = "image";
 
-    render() {
-
-        let publicUrl = process.env.PUBLIC_URL+'/'
-        let imagealt = 'image'
-
-    return	<div>
-              <div className="destinations-details-page mg-top--70">
-                <div className="container">
-                  {/* destinations-details-main-slider start */}
-                  <div className="row justify-content-center">
-                    <div className="col-xl-10">
-                      <div className="destinations-details-main-slider-wrap">
-                        <div className="destinations-details-main-slider">
-                          <div className="d-details-main-slider-item">
-                            <img src={publicUrl+"assets/img/others/3.png"} alt="img" />
-                          </div>
-                          <div className="d-details-main-slider-item">
-                            <img src={publicUrl+"assets/img/others/2.png"} alt="img" />
-                          </div>
-                          <div className="d-details-main-slider-item">
-                            <img src={publicUrl+"assets/img/others/4.png"} alt="img" />
-                          </div>
-                        </div>
-                        <div className="destinations-details-main-slider-controls">
-                          <div className="slider-nav tp-control-nav" />
-                          {/*slider-nav*/}
-                          <div className="slider-extra tp-slider-extra">
-                            <div className="text">
-                              <span className="first">01 </span>
-                              <span className="last">05</span>
-                            </div>
-                            {/*text*/}
-                            <div className="d-list-progress" role="progressbar" aria-valuemin={0} aria-valuemax={100}>
-                              <span className="slider__label sr-only" />
-                            </div>
-                          </div>
-                          {/*slider-extra*/}
-                        </div>
-                      </div>
+  return (
+    <div>
+      <div className="destinations-details-page mg-top--70">
+        <div className="container">
+          {/* destinations-details-main-slider start */}
+          <div className="row justify-content-center">
+            <div className="col-xl-10">
+              <div className="destinations-details-main-slider-wrap">
+                <div className="destinations-details-main-slider">
+                  <div className="d-details-main-slider-item">
+                    <img
+                      src={
+                        "https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
+                      }
+                      alt="img"
+                    />
+                  </div>
+                  <div className="d-details-main-slider-item">
+                    <img
+                      src={publicUrl + "assets/img/others/2.png"}
+                      alt="img"
+                    />
+                  </div>
+                  <div className="d-details-main-slider-item">
+                    <img
+                      src={publicUrl + "assets/img/others/4.png"}
+                      alt="img"
+                    />
+                  </div>
+                </div>
+                <div className="destinations-details-main-slider-controls">
+                  <div className="slider-nav tp-control-nav" />
+                  {/*slider-nav*/}
+                  <div className="slider-extra tp-slider-extra">
+                    <div className="text">
+                      <span className="first">01 </span>
+                      <span className="last"></span>
+                    </div>
+                    {/*text*/}
+                    <div
+                      className="d-list-progress"
+                      role="progressbar"
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                    >
+                      <span className="slider__label sr-only" />
                     </div>
                   </div>
-                  {/* destinations-details-main-slider End */}
-                  <div className="row destinations-details-location-name">
-                    <div className="col-lg-12">
-                      <h3>Sài Gòn</h3>
-                      <p>20 Nov 2020</p>
-                    </div>
-                    <div className="col-lg-6">
-                      <p>Sài Gòn content ...  is the world's second largest and second most-populous continent. At about 30.3 million km² including djacent islands, it covers 6% of Earth's total surface area and 20% of its land area. With 1.2 billion people as of 2016, it accounts for about 16% of the world's human population</p>
-                    </div>
-                    <div className="col-lg-6">
-                      <p>It accounts for about 16% of the world's human population. The continent is surrounded by the Mediterranean Sea to the Africa is the world's second largest and second most-populous continent. At about 30.3 million km² including djacent islands.</p>
-                    </div>
-                  </div>
-                  {/* destinations-client-review-slider start */}
-                  <h4 className="single-page-small-title">Based On Traveller Visits and Local Insights</h4>
-                  <div className="destinations-client-review-slider tp-common-slider-style">
-                    <div className="d-client-review-slider-item">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/8.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h4 className="title">Sài Gòn</h4>
-                          <p className="content">Sài Gòn ...is the world's second largest and second most-populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-client-review-slider-item">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/9.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h4 className="title">Hội An</h4>
-                          <p className="content">Hoi An ...  is the world's second largest and second most-populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-client-review-slider-item">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/10.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h4 className="title">Binh Thuan</h4>
-                          <p className="content">Binh Thuan is the world's second largest and second most-populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-client-review-slider-item">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/11.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h4 className="title">Đà Lạt</h4>
-                          <p className="content">Đà Lạt is the world's second largest and second most-populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-client-review-slider-item">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/12.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h4 className="title">Huế</h4>
-                          <p className="content">Huế is the world's second largest and second most-populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* destinations-client-review-slider end */}
-                  {/* trip-plan start */}
-                  
-                  {/* comment Tri
+                  {/*slider-extra*/}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* destinations-details-main-slider End */}
+          <div className="row destinations-details-location-name">
+            <div className="col-lg-12">
+              <h3>Sài Gòn</h3>
+              <p>20 Nov 2020</p>
+            </div>
+            <div className="col-lg-6">
+              <p>
+                Sài Gòn content ... is the world's second largest and second
+                most-populous continent. At about 30.3 million km² including
+                djacent islands, it covers 6% of Earth's total surface area and
+                20% of its land area. With 1.2 billion people as of 2016, it
+                accounts for about 16% of the world's human population
+              </p>
+            </div>
+            <div className="col-lg-6">
+              <p>
+                It accounts for about 16% of the world's human population. The
+                continent is surrounded by the Mediterranean Sea to the Africa
+                is the world's second largest and second most-populous
+                continent. At about 30.3 million km² including djacent islands.
+              </p>
+            </div>
+          </div>
+          {/* destinations-client-review-slider start */}
+          <h4 className="single-page-small-title">
+            Based On Traveller Visits and Local Insights
+          </h4>
+          <div className="destinations-client-review-slider tp-common-slider-style">
+            <div className="d-client-review-slider-item">
+              <div className="single-destination-grid text-center">
+                <div className="thumb">
+                  <img
+                    src={publicUrl + "assets/img/destination-list/8.png"}
+                    alt="img"
+                  />
+                </div>
+                <div className="details">
+                  {/* <div className="tp-review-meta">
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="fa fa-star" />
+                    <span>4.0</span>
+                  </div> */}
+                  <h4 className="title">Sài Gòn</h4>
+                  <p className="content">
+                    Sài Gòn ...is the world's second largest and second
+                    most-populous continent, being behind Asia in both
+                    categories. At about 30.3 million km² including adjacent
+                    islands, it
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* destinations-client-review-slider end */}
+          {/* trip-plan start */}
+
+          {/* comment Tri
                   <div className="trip-plan-area">
                     <h4 className="single-page-small-title">Plan a trip</h4>
                     <div className="row justify-content-center">
@@ -223,9 +182,9 @@ class DestinatioDetails extends Component {
                       </div>
                     </div>
                   </div> */}
-                  {/* trip-plan End */}
-                  {/* location-details start */}
-                  {/* <div className="location-details">
+          {/* trip-plan End */}
+          {/* location-details start */}
+          {/* <div className="location-details">
                     <h4 className="single-page-small-title">Good To Know</h4>
                     <div className="row">
                       <div className="col-lg-7">
@@ -266,127 +225,159 @@ class DestinatioDetails extends Component {
                       </div>
                     </div>
                   </div> */}
-                  {/* location-details end */}
-                  {/* location-review-area start */}
-                  <div className="location-review-area">
-                    <div className="row">
-                      <div className="col-lg-8">
-                        <form className="tp-form-wrap bg-gray tp-form-wrap-one">
-                          <div className="row">
-                            <div className="col-md-6"><h4 className="single-page-small-title">Write A Review</h4></div>
-                            <div className="col-md-6">
-                              <div className="tp-review-meta text-lg-right">
-                                <span className="ml-0">Assigned Rating</span>
-                                <i className="fa fa-star" />
-                                <i className="fa fa-star" />
-                                <i className="fa fa-star" />
-                                <i className="fa fa-star" />
-                                <i className="fa fa-star" />
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <label className="single-input-wrap">
-                                <span className="single-input-title">Name</span>
-                                <input type="text" />
-                              </label>
-                            </div>
-                            <div className="col-md-6">
-                              <label className="single-input-wrap">
-                                <span className="single-input-title">Email</span>
-                                <input type="text" />
-                              </label>
-                            </div>
-                            <div className="col-lg-12">
-                              <label className="single-input-wrap">
-                                <span className="single-input-title">comments</span>
-                                <textarea defaultValue={""} />
-                              </label>
-                            </div>
-                            <div className="col-12">
-                              <a className="btn btn-blue" href="#">+ Add Photo</a>
-                              <a className="btn btn-yellow float-right" href="#">Send</a>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div className="col-xl-3 col-lg-4 offset-xl-1 mt-5 mt-lg-0 hidden-md">
-                        <a href="#">
-                          {/* <img src={publicUrl+"assets/img/others/01.png"} alt="ads" /> */}
-                        </a>
-                      </div>
+          {/* location-details end */}
+          {/* location-review-area start */}
+          <div className="location-review-area">
+            <div className="row">
+              <div className="col-lg-8">
+                <form className="tp-form-wrap bg-gray tp-form-wrap-one">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <label className="single-input-wrap">
+                        <span className="single-input-title">Name</span>
+                        <input type="text" />
+                      </label>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="single-input-wrap">
+                        <span className="single-input-title">Email</span>
+                        <input type="text" />
+                      </label>
+                    </div>
+                    <div className="col-lg-12">
+                      <label className="single-input-wrap">
+                        <span className="single-input-title">comments</span>
+                        <textarea defaultValue={""} />
+                      </label>
+                    </div>
+                    <div className="col-12">
+                      <a className="btn btn-blue" href="#">
+                        + Add Photo
+                      </a>
+                      <a className="btn btn-yellow float-right" href="#">
+                        Send
+                      </a>
                     </div>
                   </div>
-                  {/* location-review-area start */}
-                </div>
+                </form>
               </div>
-              <div className="destination-area pd-top-120">
-                <div className="container">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-4 col-md-6">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/8.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h3 className="title">Sài Gòn</h3>
-                          <p className="content">Sài Gòn .. is the world's second largest and second most- populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it covers 6% Earth's total surface area and 20% land area.</p>
-                          <a className="btn btn-gray" href="#"><span>Explore<i className="la la-arrow-right" /></span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/9.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h3 className="title">Hội An</h3>
-                          <p className="content">Hội An is the world's second largest and second most- populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it covers 6% Earth's total surface area and 20% land area.</p>
-                          <a className="btn btn-gray" href="#"><span>Explore<i className="la la-arrow-right" /></span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6">
-                      <div className="single-destination-grid text-center">
-                        <div className="thumb">
-                          <img src={publicUrl+"assets/img/destination-list/10.png"} alt="img" />
-                        </div>
-                        <div className="details">
-                          <div className="tp-review-meta">
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="ic-yellow fa fa-star" />
-                            <i className="fa fa-star" />
-                            <span>4.0</span>
-                          </div>
-                          <h3 className="title">Bình Thuận</h3>
-                          <p className="content">Bình Thuận is the second most- populous continent, being behind Asia in both categories. At about 30.3 million km² including adjacent islands, it covers 6% Earth's total surface area and 20% land area.</p>
-                          <a className="btn btn-gray" href="#"><span>Explore<i className="la la-arrow-right" /></span></a>
-                        </div>
-                      </div>
-                    </div>
+              <div className="col-xl-3 col-lg-4 offset-xl-1 mt-5 mt-lg-0 hidden-md">
+                <a href="#">
+                  {/* <img src={publicUrl+"assets/img/others/01.png"} alt="ads" /> */}
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* location-review-area start */}
+        </div>
+      </div>
+      <div className="destination-area pd-top-120">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-destination-grid text-center">
+                <div className="thumb">
+                  <img
+                    src={publicUrl + "assets/img/destination-list/8.png"}
+                    alt="img"
+                  />
+                </div>
+                <div className="details">
+                  <div className="tp-review-meta">
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="fa fa-star" />
+                    <span>4.0</span>
                   </div>
+                  <h3 className="title">Sài Gòn</h3>
+                  <p className="content">
+                    Sài Gòn .. is the world's second largest and second most-
+                    populous continent, being behind Asia in both categories. At
+                    about 30.3 million km² including adjacent islands, it covers
+                    6% Earth's total surface area and 20% land area.
+                  </p>
+                  <a className="btn btn-gray" href="#">
+                    <span>
+                      Explore
+                      <i className="la la-arrow-right" />
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
-        }
-}
+            <div className="col-lg-4 col-md-6">
+              <div className="single-destination-grid text-center">
+                <div className="thumb">
+                  <img
+                    src={publicUrl + "assets/img/destination-list/9.png"}
+                    alt="img"
+                  />
+                </div>
+                <div className="details">
+                  <div className="tp-review-meta">
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="fa fa-star" />
+                    <span>4.0</span>
+                  </div>
+                  <h3 className="title">Hội An</h3>
+                  <p className="content">
+                    Hội An is the world's second largest and second most-
+                    populous continent, being behind Asia in both categories. At
+                    about 30.3 million km² including adjacent islands, it covers
+                    6% Earth's total surface area and 20% land area.
+                  </p>
+                  <a className="btn btn-gray" href="#">
+                    <span>
+                      Explore
+                      <i className="la la-arrow-right" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="single-destination-grid text-center">
+                <div className="thumb">
+                  <img
+                    src={publicUrl + "assets/img/destination-list/10.png"}
+                    alt="img"
+                  />
+                </div>
+                <div className="details">
+                  <div className="tp-review-meta">
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="ic-yellow fa fa-star" />
+                    <i className="fa fa-star" />
+                    <span>4.0</span>
+                  </div>
+                  <h3 className="title">Bình Thuận</h3>
+                  <p className="content">
+                    Bình Thuận is the second most- populous continent, being
+                    behind Asia in both categories. At about 30.3 million km²
+                    including adjacent islands, it covers 6% Earth's total
+                    surface area and 20% land area.
+                  </p>
+                  <a className="btn btn-gray" href="#">
+                    <span>
+                      Explore
+                      <i className="la la-arrow-right" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default DestinatioDetails
+export default DestinatioDetails;

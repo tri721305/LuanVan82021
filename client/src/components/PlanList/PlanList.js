@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
 import Plan1 from "./Plan/Plan1";
@@ -22,7 +22,7 @@ const PlanList = ({ setCurrentId }) => {
         spacing={3}
       >
         {posts.map((post) => (
-          <Grid key={post._id} item xs={12} sm={12} md={6} lg={4}>
+          <Grid key={post._id} item xs={12} sm={12} md={6} lg={6}>
             <Plan1 post={post} setCurrentId={setCurrentId} />
           </Grid>
         ))}

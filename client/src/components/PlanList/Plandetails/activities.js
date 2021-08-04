@@ -11,7 +11,7 @@ class TourDetails extends Component {
       <div className="tour-details-area mg-top--70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="tour-details-wrap">
                 <h4 className="single-page-small-title">Plan</h4>
                 <p>
@@ -27,12 +27,11 @@ class TourDetails extends Component {
                 {/* Tao Plan Moi Ngay Di */}
 
                 <div className="package-included-location">
-                  <h4 className="single-page-small-title">Plan</h4>
                   <div className="row">
                     <div className="col-lg-4 col-md-4">
                       <div className="single-blog">
                         <div className="p-list">
-                          <div className="list">1</div>
+                          <div className="list">2</div>
                           <p>Day 1</p>
                         </div>
                         <div className="thumb">
@@ -59,100 +58,7 @@ class TourDetails extends Component {
                     <div className="col-lg-4 col-md-4">
                       <div className="single-blog">
                         <div className="p-list">
-                          <div className="list">2</div>
-                          <p>Day 2</p>
-                        </div>
-                        <div className="thumb">
-                          <img
-                            src={publicUrl + "assets/img/blog/1.png"}
-                            alt="blog"
-                          />
-                        </div>
-                        <div className="single-blog-details">
-                          <h4 className="title">Cafe, ăn hết Đà Lạt</h4>
-                          <p className="content">
-                            Ngày thứ hai, nhóm tụi mình đã ghé thăm cafe nhà gỗ,
-                            ......
-                          </p>
-                          <a className="btn-read-more" href="#">
-                            <span>
-                              Add more activities
-                              <i className="la la-arrow-right" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    {/* ****** */}
-                    {/* ******** */}
-
-                    <div className="col-lg-4 col-md-4">
-                      <div className="single-blog single-blog-after-none">
-                        <div className="p-list">
-                          <div className="list">3</div>
-                          <p>Day 3</p>
-                        </div>
-                        <div className="thumb">
-                          <img
-                            src={publicUrl + "assets/img/blog/9.png"}
-                            alt="blog"
-                          />
-                        </div>
-                        <div className="single-blog-details">
-                          <h4 className="title">Quẫy ngày cuối và lên xe về</h4>
-                          <p className="content">
-                            Ngày cuối cùng nhóm tụi mình đã quyết định đi ngắm
-                            bình minh, săn mây ở ....
-                          </p>
-                          <a className="btn-read-more" href="#">
-                            <span>
-                              Add more activities
-                              <i className="la la-arrow-right" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="package-included-location">
-                  <h4 className="single-page-small-title">
-                    Add more activities: <button>Add</button>
-                  </h4>
-
-                  <div className="row">
-                    <div className="col-lg-4 col-md-4">
-                      <div className="single-blog">
-                        <div className="p-list">
                           <div className="list">1</div>
-                          <p>Day 1</p>
-                        </div>
-                        <div className="thumb">
-                          <img
-                            src={publicUrl + "assets/img/blog/8.png"}
-                            alt="blog"
-                          />
-                        </div>
-                        <div className="single-blog-details">
-                          <h4 className="title">Welcome to DaLat</h4>
-                          <p className="content">
-                            Bước xuống xe là cảm giác không lẫn vào đâu được,
-                            không khí se se lạnh....
-                          </p>
-                          <a className="btn-read-more" href="#">
-                            <span>
-                              Add more activities
-                              <i className="la la-arrow-right" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-4">
-                      <div className="single-blog">
-                        <div className="p-list">
-                          <div className="list">2</div>
                           <p>Day 2</p>
                         </div>
                         <div className="thumb">
@@ -330,38 +236,10 @@ class TourDetails extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <div className="sidebar-area sidebar-area-4">
                 <div className="widget tour-list-widget">
                   <div className="widget-tour-list-meta">
-                    <div className="single-widget-search-input-title">
-                      <i className="fa fa-user" /> Name
-                    </div>
-                    <div className="single-widget-search-input">
-                      <input type="text" placeholder="Name" />
-                    </div>
-                    <div className="single-widget-search-input-title">
-                      <i className="fa fa-envelope" /> Email
-                    </div>
-                    <div className="single-widget-search-input">
-                      <input type="text" placeholder="Email" />
-                    </div>
-                    <div className="single-widget-search-input-title">
-                      <i className="fa fa-phone" /> Phone
-                    </div>
-                    <div className="single-widget-search-input">
-                      <input type="text" placeholder="Phone" />
-                    </div>
-                    <div className="single-widget-search-input-title">
-                      <i className="fa fa-calendar-minus-o" /> Date
-                    </div>
-                    <div className="single-widget-search-input">
-                      <input
-                        type="text"
-                        className="departing-date custom-select"
-                        placeholder="Departing"
-                      />
-                    </div>
                     <div className="single-widget-search-input-title">
                       <i className="fa fa-calendar-minus-o" /> Date
                     </div>
@@ -385,17 +263,8 @@ class TourDetails extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="widget_ads">
-                  <a href="#">
-                    <img
-                      className="w-100"
-                      src={publicUrl + "assets/img/others/01.png"}
-                      alt="img"
-                    />
-                  </a>
-                </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

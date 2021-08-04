@@ -68,10 +68,12 @@ export const createPost = (post, history) => async (dispatch) => {
   }
 };
 
-export const updatePost = (id, post) => async (dispatch) => {
+export const updatePost = (id, post, history) => async (dispatch) => {
   try {
+    dispatch({ type: START_LOADING });
     const { data } = await api.updatePost(id, post);
 
+    history.push(`posts/${data._id}`);
     dispatch({ type: UPDATE, payload: data });
   } catch (error) {
     console.log(error.message);
@@ -90,11 +92,11 @@ export const likePost = (id) => async (dispatch) => {
 
 export const commentPost = (value, id) => async (dispatch) => {
   try {
-    const { data } = await api.comment(value, id);
+    const { data } = await api.commentPost(value, id);
 
     // console.log(data);
 
-    dispatch({ type: "COMMENT", payload: data });
+    dispatch({ type: COMMENT, payload: data });
 
     return data.comments;
   } catch (error) {

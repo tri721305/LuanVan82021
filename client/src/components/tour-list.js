@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./global-components/navbar";
 import PageHeader from "./global-components/page-header";
-// import TourLIst from "./section-components/tour-list";
+import TourLIst from "./section-components/tour-list";
 import Subscribe from "./section-components/subscribe";
 import Footer from "./global-components/footer";
 // import x from './secti'
@@ -10,7 +10,7 @@ const TourListPage = () => {
     <div>
       <Navbar />
       <PageHeader headertitle="Tour List" />
-      {/* <TourLIst /> */}
+      <TourLIst />
       <Subscribe />
       <Footer />
     </div>
