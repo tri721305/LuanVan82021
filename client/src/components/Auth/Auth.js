@@ -139,25 +139,7 @@ const Auth = () => {
           >
             {isSignup ? "Sign Up" : "Sign In"}
           </Button>
-          {/* <GoogleLogin
-            clientId="206502096917-j0aljh1tua959e5koc5ik0a3hrhvod60.apps.googleusercontent.com"
-            render={(renderProps) => (
-              <Button
-                className={classes.googleButton}
-                color="primary"
-                fullWidth
-                onClick={renderProps.onClick}
-                disabled={renderProps.disabled}
-                startIcon={<Icon />}
-                variant="contained"
-              >
-                Google Sign In
-              </Button>
-            )}
-            onSuccess={googleSuccess}
-            onFailure={googleFailure}
-            cookiePolicy="single-host-origin"
-          /> */}
+
           <GoogleLogin
             clientId="206502096917-j0aljh1tua959e5koc5ik0a3hrhvod60.apps.googleusercontent.com"
             render={(renderProps) => (
