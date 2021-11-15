@@ -119,7 +119,7 @@ const Plan1 = ({ post, setCurrentId }) => {
         </Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {post.message}
+            {/* {post.message} */}
           </Typography>
         </CardContent>
       </ButtonBase>

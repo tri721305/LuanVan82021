@@ -8,7 +8,7 @@ import {
   Container,
   // TextField,
 } from "@material-ui/core";
-
+import { Alert, AlertTitle } from "@material-ui/lab";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -18,6 +18,7 @@ import useStyles from "./styles";
 import Input from "./input";
 
 import { signin, signup } from "../../actions/auth";
+// import { Alert } from "@material-ui/lab";
 const initialState = {
   firstName: "",
   lastName: "",
@@ -42,7 +43,23 @@ const Auth = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(formData);
+    // if (formData.password !== formData.confirmPassword) {
+    //   Alert(
+    //     "Your Password Not Matched ! Please Check your password and confirm password"
+    //   );
+    //   return false;
+    // }
+    // console.log(formData.password);
+    // if (formData.password !== formData.confirmPassword) {
+    //   console.log("Sai");
+    //   return (
+    //     <Alert severity="error">
+    //       <AlertTitle>Error</AlertTitle>
+    //       This is an error alert — <strong>check it out!</strong>
+    //     </Alert>
+    //   );
+    // }
+
     if (isSignup) {
       dispatch(signup(formData, history));
     } else {
@@ -82,8 +99,15 @@ const Auth = () => {
   };
   return (
     <Container component="main" maxWidth="xs">
+      {/* <Alert severity="error">
+        <AlertTitle>Error</AlertTitle>
+        This is an error alert — <strong>check it out!</strong>
+      </Alert> */}
       <Paper className={classes.paper} elevation={3}>
-        <Avatar className={classes.avatar}>
+        <Avatar
+          className={classes.avatar}
+          style={{ backgroundColor: "#F39142" }}
+        >
           <LockOutlinedIcon />
         </Avatar>
         <Typography variant="h5">{isSignup ? "Sign Up" : "Sign In"}</Typography>
@@ -97,6 +121,7 @@ const Auth = () => {
                   handleChange={handleChange}
                   autoFocus
                   half
+                  value={formData.firstName}
                 />
                 <Input
                   name="lastName"
@@ -104,6 +129,7 @@ const Auth = () => {
                   handleChange={handleChange}
                   autoFocus
                   half
+                  value={formData.lastName}
                 />
               </>
             )}
@@ -112,6 +138,7 @@ const Auth = () => {
               label="Email Adress"
               handleChange={handleChange}
               type="email"
+              value={formData.email}
             />
             <Input
               name="password"
@@ -119,6 +146,7 @@ const Auth = () => {
               handleChange={handleChange}
               type={showPassword ? "text" : "password"}
               handleShowPassword={handleShowPassword}
+              value={formData.password}
             />
             {isSignup && (
               <Input
@@ -126,6 +154,7 @@ const Auth = () => {
                 label="Repeat Password"
                 handleChange={handleChange}
                 type="password"
+                value={formData.confirmPassword}
               />
             )}
           </Grid>
@@ -136,6 +165,7 @@ const Auth = () => {
             variant="contained"
             color="primary"
             className={classes.submit}
+            style={{ backgroundColor: "F39142" }}
           >
             {isSignup ? "Sign Up" : "Sign In"}
           </Button>
@@ -144,8 +174,9 @@ const Auth = () => {
             clientId="206502096917-j0aljh1tua959e5koc5ik0a3hrhvod60.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button
+                style={{ color: "F39142" }}
                 className={classes.googleButton}
-                color="primary"
+                // color="primary"
                 fullWidth
                 onClick={renderProps.onClick}
                 disabled={renderProps.disabled}

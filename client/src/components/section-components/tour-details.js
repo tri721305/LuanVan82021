@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
 
-class TourDetails extends Component {
+class X extends Component {
   render() {
     let publicUrl = process.env.PUBLIC_URL + "/";
     let imagealt = "image";
@@ -327,10 +327,6 @@ class TourDetails extends Component {
                 </div>
 
                 <div className="package-included-location">
-                  <h4 className="single-page-small-title">
-                    Add more activities: <button>Add</button>
-                  </h4>
-
                   {/* <div className="row">
                     <div className="col-lg-4 col-md-4">
                       <div className="single-blog">
@@ -611,4 +607,4 @@ class TourDetails extends Component {
   }
 }
 
-export default TourDetails;
+export default X;

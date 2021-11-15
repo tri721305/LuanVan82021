@@ -65,7 +65,7 @@ const AddActivities = ({ plan, plandate }) => {
                 </div>
                 <div className="TodoItem-todo">
                   <div className="TodoItem-todo__text">{c.comment}</div>
-                  <div className="TodoItem-todo__memo">Long An</div>
+                  <div className="TodoItem-todo__memo">{plan.location}</div>
                 </div>
                 <div className="TodoItem-delete">
                   <button

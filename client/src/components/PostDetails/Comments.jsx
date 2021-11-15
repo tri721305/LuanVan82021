@@ -46,7 +46,7 @@ const Comments = ({ post }) => {
                       <div className="content">
                         <h4 className="title">{c.split(":")[0]}</h4>
                         <span className="date">17 SEP 2020</span>
-                        <p>{c.split(":")[0]}</p>
+                        <p>{c.split(":")[1]}</p>
                         <a href="#" className="reply btn btn-yellow">
                           <span>
                             <i className="fa fa-reply" />

@@ -3,7 +3,6 @@ import Comments from "./Comments";
 import { useDispatch, useSelector } from "react-redux";
 import { Paper, CircularProgress, Divider } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
 import parse from "html-react-parser";
 import moment from "moment";
 import { useParams, useHistory } from "react-router-dom";
@@ -45,7 +44,7 @@ const DestinatioDetails = () => {
   }
 
   const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
-
+  console.log(recommendedPosts);
   const openPost = (_id) => history.push(`/posts/${_id}`);
   return (
     <div>
@@ -116,7 +115,7 @@ const DestinatioDetails = () => {
                               className="content"
                               style={{ textAlign: "start" }}
                             >
-                              {message}
+                              {/* {message} */}
                             </p>
                           </div>
                         </div>
@@ -155,7 +154,7 @@ const DestinatioDetails = () => {
                   </p>
                   <a className="btn btn-gray" href="#">
                     <span>
-                      <Link to="/blogdetails">Explore</Link>
+                      <Link to="/blogdetails">Explore</Link>{" "}
                       <i className="la la-arrow-right" />
                     </span>
                   </a>

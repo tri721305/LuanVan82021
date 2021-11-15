@@ -30,7 +30,8 @@ import ReviewPost from "./components/section-components/tour-details";
 import BlogDetails from "./components/blog-details";
 
 import PostDetails from "./components/postDetails";
-
+import AdminDetails from "./components/admindetails";
+import MapPlan from "./components/MapPlan/MapPlan";
 const App = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
   return (
@@ -40,7 +41,7 @@ const App = () => {
         {/* <Container maxWidth="lg"> */}
 
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={MapPlan} />
           <Route path="/posts" exact component={HomeCreate} />
           <Route path="/posts/search" exact component={HomeCreate} />
 
@@ -61,7 +62,7 @@ const App = () => {
           />
           <Route path="/about" component={About} />
 
-          <Route path="/tourlist" component={TourDetails} />
+          <Route path="/admindetail" component={AdminDetails} />
           <Route path="/destinationlist" component={DestinationListV2} />
 
           <Route path="/user-profile" component={UserProfilePage} />

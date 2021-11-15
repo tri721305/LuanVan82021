@@ -117,30 +117,29 @@ const FormPlan = ({ currentId, setCurrentId }) => {
             setPlanData({ ...planData, endDate: e.target.value })
           }
         />
-
-        <TextField
-          name="title"
-          variant="outlined"
-          label="Location"
-          fullWidth
-          value={planData.location}
-          onChange={(e) =>
-            setPlanData({ ...planData, location: e.target.value })
-          }
-        />
-
         <TextField
           name="message"
           variant="outlined"
-          label="Message"
+          label="Point of departure"
           fullWidth
           multiline
-          rows={4}
+          // rows={4}
           value={planData.message}
           onChange={(e) => {
             setPlanData({ ...planData, message: e.target.value });
             console.log(planData);
           }}
+        />
+
+        <TextField
+          name="title"
+          variant="outlined"
+          label="Destination"
+          fullWidth
+          value={planData.location}
+          onChange={(e) =>
+            setPlanData({ ...planData, location: e.target.value })
+          }
         />
 
         {/* <TextField
